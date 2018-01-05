@@ -1,4 +1,4 @@
-###34c3 readme_revenge
+#34c3 readme_revenge
 
 首先看32c3的[readme](https://github.com/zookee1/32c3-ctf/tree/master/readme)。
 
