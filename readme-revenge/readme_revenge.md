@@ -1,4 +1,4 @@
-##34c3 readme_revenge
+###34c3 readme_revenge
 
 首先看32c3的[readme](https://github.com/zookee1/32c3-ctf/tree/master/readme)。
 
@@ -11,7 +11,15 @@
 `__fortify_fail`源码：
 
 ```c
-void__attribute__ ((noreturn))__fortify_fail (msg)const char *msg; {  /* The loop is added only to keep gcc happy. */while (1)__libc_message (2, "*** %s ***: %s terminated\n",                    msg, __libc_argv[0] ?: "<unknown>")libc_hidden_def (__fortify_fail)
+void
+__attribute__ ((noreturn))
+__fortify_fail (msg)
+const char *msg; {
+  /* The loop is added only to keep gcc happy. */
+while (1)
+__libc_message (2, "*** %s ***: %s terminated\n",
+                    msg, __libc_argv[0] ?: "<unknown>")
+libc_hidden_def (__fortify_fail)
 ```
 
 `__libc_message`源码：
